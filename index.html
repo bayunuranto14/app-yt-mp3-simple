@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabturu Youtube Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <meta name="title" content="SabturuMp3Converter - Convert Youtube Video to Mp3">
+    <meta name="description"
+        content="SabturuMp3Converter - sebuah tools untuk membantu mengkonvert link mp4 dari youtube dan digenerate ulang ke mp3">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="YouTube To MP3 Downloader— Convert YouTube Video To MP3" />
+    <meta property="og:description"
+        content="SabturuMp3Converter - easily convert youtube video to mp3 and download for free..." />
+    <meta property="og:image" content="./assets/images/youtube.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-sm ml-auto navbar-dark bg-danger">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">Sabturu Youtube Converter</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html" aria-current="page">Home <span
+                                    class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://rapidapi.com/ytjar/api/youtube-mp3-download1"
+                                target="_blank">Link
+                                Source API</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container mt-4">
+            <div class="text-light">
+                <h1 class="text-center">Download YouTube Video in MP3 audio</h1>
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class=" align-items-center text-center">
+                                <div class="col-md-9">
+                                    <div class="h-50 p-5 text-white bg-black rounded-3">
+                                        <img class=" w-50 img-fluid"
+                                            src="https://www.nuranto.my.id/assets/logo-sabturu-black.png"
+                                            alt="sabturu-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="lead">
+                                What is Sabturu Youtube Converter ?
+                            </p>
+                            <p class="align-items-center lead pt-2">
+                                Sabturu Youtube Converter is Tools Quickly and easily download your YouTube video to MP3
+                                for
+                                free.
+                                Paste your link into the input and press the
+                                <span class="fw-bold text-danger">DOWNLOAD</span> button
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-5 col-md-6 col-sm-12">
+                    <div id="alert" class="alert alert-warning d-flex align-items-center d-none" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+                            aria-label="Warning:">
+                            <path
+                                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                        <span><strong>Ooops! </strong> no valid YouTube link found.</span>
+                    </div>
+                </div>
+
+                <div id="warning" class="alert alert-danger d-flex align-items-center d-none" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+                        aria-label="Warning:">
+                        <path
+                            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                    <span><strong>Ooops! </strong>Error while processing! Please try
+                        again</span>
+                </div>
+
+                <form onsubmit="return false;">
+                    <div class="input-group mb-3">
+                        <input required type="text" id="link-input" class="form-control border border-3 rounded-0"
+                            placeholder="Paste Link Youtube disini ... " aria-label="link"
+                            aria-describedby="button-addon2" />
+                        <button class="btn btn-lg rounded-0 btn-danger" type="button" id="download-button">
+                            <span id="loading" class="d-none spinner-border spinner-border-sm" role="status"
+                                aria-hidden="true"></span>
+                            DOWNLOAD
+                        </button>
+                    </div>
+                    <p class="text-center text-warning">
+                        Search any YouTube
+                        Video
+                        URL
+                    </p>
+                </form>
+                <div id="progress" class="progress d-none col-md-6 col-sm-12 mb-4">
+                    <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100">
+                        0%
+                    </div>
+                </div>
+                <div id="download-box" class="card d-none col-md-6 col-sm-12">
+                    <div class="card-body">
+                        <h6 class="fw-bold">
+                            Title:
+                            <span id="title" class="text-primary"> title</span>
+                        </h6>
+                        <!-- <p class="fw-semibold">
+                        Duration:<span id="duration" class="text-primary">
+                          1:30 mins</span
+                        >
+                      </p> -->
+                        <a id="download-mp3-button" href="" target="_blank" class="btn rounded-0 btn-danger">Download
+                            mp3</a>
+                    </div>
+                </div>
+
+
+
+
+    </main>
+    <footer class="bg-danger text-light text-center mt-4">
+        © YTMP3Converter | NRTID 2023 | All Right Reserved
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+
+</html>
